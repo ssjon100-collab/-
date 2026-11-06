@@ -16,8 +16,8 @@ export const SITE_INFO = {
   deliveryType: '10년 장기 일반민간임대주택 (전세형)',
   instantMoveIn: '즉시입주 가능',
   loanHighlight: '80% 대출 가능 (HUG 안심대출)',
-  complexImage: '/assets/aistudio/site_layout_optimized.jpg',
-  complexImageRaw: '/assets/aistudio/____0330_5fe3f1e8.jpg',
+  complexImage: './assets/aistudio/site_layout_optimized.jpg',
+  complexImageRaw: './assets/aistudio/____0330_5fe3f1e8.jpg',
   formspreeEndpoint: 'https://formspree.io/f/xqppjnqd',
 };
 
@@ -33,7 +33,7 @@ export const UNIT_TYPES: UnitType[] = [
     description: '남향 위주 4Bay 판상형 특화설계로 채광과 통풍을 극대화한 실속형 프리미엄 평면',
     structure: '침실 3 / 욕실 2 / 대형 드레스룸 / 현관 팬트리 / 주방 다용도실',
     aspect: '남동향 · 남서향',
-    imagePath: '/assets/aistudio/iso_78type_abd69ba1.jpg',
+    imagePath: './assets/aistudio/iso_78type_abd69ba1.jpg',
     features: [
       '일조권과 채광을 고려한 4Bay 판상형 구조',
       '수납력을 극대화한 현관 대형 수납장 & 주방 팬트리',
@@ -52,7 +52,7 @@ export const UNIT_TYPES: UnitType[] = [
     description: '가장 선호도 높은 84㎡ 맞통풍 4Bay 구조와 광폭 거실, 넉넉한 수납공간을 갖춘 주력 평면',
     structure: '침실 3 / 욕실 2 / 광폭 드레스룸 / 알파룸 연계형 팬트리 / 다용도실',
     aspect: '남향 위주 전 세대 배치',
-    imagePath: '/assets/aistudio/iso_84Atype_da2a29e6.jpg',
+    imagePath: './assets/aistudio/iso_84Atype_da2a29e6.jpg',
     features: [
       '거실과 주방 맞통풍 설계로 탁월한 자연 환기성',
       '알파룸급 대형 복도 팬트리 및 현관 스마트 수납',
@@ -71,7 +71,7 @@ export const UNIT_TYPES: UnitType[] = [
     description: '탁 트인 조망권과 독립적인 공간 배치가 돋보이는 모던 감각의 이면 개방형 특화 평면',
     structure: '침실 3 / 욕실 2 / 워크인 드레스룸 / 복도 수납장 / 발코니',
     aspect: '남동·남서 2면 개방 조망권',
-    imagePath: '/assets/aistudio/iso_84Btype_128f7037.jpg',
+    imagePath: './assets/aistudio/iso_84Btype_128f7037.jpg',
     features: [
       '부부 침실과 자녀 방 분리형 동선으로 프라이버시 보호',
       '2면 개방형 거실 설계로 파노라마 뷰와 풍부한 일조량',

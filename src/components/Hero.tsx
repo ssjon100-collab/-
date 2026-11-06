@@ -12,9 +12,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
       {/* Background Aerial Perspective Rendering */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="/assets/aistudio/hero_perspective_optimized.jpg"
+          src="./assets/aistudio/hero_perspective_optimized.jpg"
           onError={(e) => {
-            (e.currentTarget as HTMLImageElement).src = '/assets/aistudio/________2________38da2514.jpg';
+            (e.currentTarget as HTMLImageElement).src = './assets/aistudio/________2________38da2514.jpg';
           }}
           alt="안성공도 센트럴카운티 단지 조감도"
           className="w-full h-full object-cover object-center filter brightness-[0.55] contrast-[1.08] scale-100"
