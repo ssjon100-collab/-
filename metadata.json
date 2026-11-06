@@ -1,0 +1,6 @@
+{
+  "name": "안성공도 센트럴카운티 공식 홍보관",
+  "description": "안성공도 센트럴카운티 10년 민간임대 및 분양 공식 홍보관. 용머리초 도보 1분 초품아, 스타필드 안성 생활권. 대표문의 1688-8768.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
