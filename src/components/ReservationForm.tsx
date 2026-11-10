@@ -50,7 +50,7 @@ export const ReservationForm: React.FC = () => {
     const code = 'AC-' + Math.floor(100000 + Math.random() * 900000);
 
     try {
-      // 1. Submit to user's Formspree endpoint
+      // 1. Submit to user's Formspree endpoint (https://formspree.io/f/xqppjnqd)
       const response = await fetch(SITE_INFO.formspreeEndpoint, {
         method: 'POST',
         headers: {
@@ -58,6 +58,10 @@ export const ReservationForm: React.FC = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          name: formData.name.trim(),
+          phone: formData.phone.trim(),
+          message: formData.inquiry.trim() || '문의사항 없음',
+          _subject: `[안성공도 센트럴카운티] 관심고객 등록 접수 (${formData.name} / ${formData.phone})`,
           '성함': formData.name.trim(),
           '연락처': formData.phone.trim(),
           '문의사항': formData.inquiry.trim() || '없음',
@@ -189,7 +193,8 @@ export const ReservationForm: React.FC = () => {
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action={SITE_INFO.formspreeEndpoint} method="POST" onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="_subject" value="[안성공도 센트럴카운티] 관심고객 등록 접수" />
               {errorMsg && (
                 <div className="flex items-center gap-2 bg-red-50 text-red-700 text-xs sm:text-sm p-3.5 rounded-xl border border-red-200 font-medium animate-in fade-in">
                   <AlertCircle className="w-4 h-4 shrink-0" />
@@ -207,6 +212,7 @@ export const ReservationForm: React.FC = () => {
                     <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
+                      name="name"
                       required
                       placeholder="홍길동"
                       value={formData.name}
@@ -228,6 +234,7 @@ export const ReservationForm: React.FC = () => {
                     <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="tel"
+                      name="phone"
                       required
                       placeholder="010-0000-0000"
                       value={formData.phone}
@@ -244,6 +251,7 @@ export const ReservationForm: React.FC = () => {
                   문의사항 (선택사항)
                 </label>
                 <textarea
+                  name="message"
                   rows={3}
                   placeholder="즉시입주 일정 문의, 잔여 동호수 문의, 전세자금 80% 대출 조건 등 궁금하신 점을 자유롭게 남겨주세요."
                   value={formData.inquiry}

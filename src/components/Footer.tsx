@@ -43,11 +43,10 @@ export const Footer: React.FC = () => {
         {/* Middle Project Details */}
         <div className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-slate-400 text-[11px] leading-relaxed">
           <div>
-            <h5 className="font-bold text-slate-300 text-xs mb-2">사업 및 시공 안내</h5>
+            <h5 className="font-bold text-slate-300 text-xs mb-2">사업 안내</h5>
             <p>• 사업지: {SITE_INFO.siteAddress}</p>
-            <p>• 시행사: {SITE_INFO.developer} | 시공사: {SITE_INFO.constructor}</p>
             <p>• 보증기관: {SITE_INFO.trustCompany}</p>
-            <p>• 단지규모: {SITE_INFO.scale} (총 {SITE_INFO.totalUnits})</p>
+            <p>• 사이트운영자 : 김승식, 문의 : 1688-8768</p>
           </div>
 
           <div>
